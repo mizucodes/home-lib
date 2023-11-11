@@ -83,6 +83,8 @@ namespace HomeLibrary
             foreach (var book in books)
             {
                 Console.WriteLine($"ID: {book.BookId}, Title: {book.Title}, Author: {book.Author}");
+                Console.WriteLine($"Description: {book.Description}");
+                Console.WriteLine(); // empty line for better readability
             }
         }
 
