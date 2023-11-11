@@ -29,17 +29,17 @@ This project is a simple console-based application for managing a home library. 
 2. **Navigate to the Project Directory**:  
    Change into the project directory:
 
-'cd home_lib'
+`cd home_lib`
 
 3. **Build the Project**:  
    Compile the project using the .NET CLI:
 
-'dotnet build'
+`dotnet build`
 
 4. **Run the Application**:  
    Execute the following command to start the application:
 
-'dotnet run'
+`dotnet run`
 
 ## Usage
 
