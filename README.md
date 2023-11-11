@@ -24,22 +24,22 @@ This project is a simple console-based application for managing a home library. 
 1. **Clone the Repository**:  
    Run the following command in your terminal to clone the repository:
 
-git clone https://github.com/mizucodes/home-lib.git
+'git clone https://github.com/mizucodes/home-lib.git'
 
 2. **Navigate to the Project Directory**:  
    Change into the project directory:
 
-cd home_lib
+'cd home_lib'
 
 3. **Build the Project**:  
    Compile the project using the .NET CLI:
 
-dotnet build
+'dotnet build'
 
 4. **Run the Application**:  
    Execute the following command to start the application:
 
-dotnet run
+'dotnet run'
 
 ## Usage
 
