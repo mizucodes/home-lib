@@ -22,7 +22,8 @@ namespace HomeLibrary
                 Console.WriteLine("2. List All Books");
                 Console.WriteLine("3. Edit Book");
                 Console.WriteLine("4. Delete Book");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine("5. Update Book Description");
+                Console.WriteLine("6. Exit");
                 Console.Write("Choose an option: ");
 
                 // Parse user input and handle invalid input.
@@ -48,7 +49,10 @@ namespace HomeLibrary
                         DeleteBook(bookService); // Delete a book.
                         break;
                     case 5:
-                        Console.WriteLine("Exiting application."); // Exit the application.
+                        UpdateBookDescription(bookService); // Add book description 
+                        break;
+                    case 6:
+                        Console.WriteLine("Exiting application.");
                         return;
                     default:
                         Console.WriteLine("Invalid choice, please try again."); // Handle unknown input.
@@ -126,6 +130,31 @@ namespace HomeLibrary
             // Delete the book and confirm deletion.
             bookService.DeleteBook(bookId);
             Console.WriteLine("Book deleted successfully!");
+        }
+
+        // Method to add a description to an existing book
+        static void UpdateBookDescription(BookService bookService)
+        {
+            Console.WriteLine("Enter the ID of the book to update the description:");
+            if (!int.TryParse(Console.ReadLine(), out int bookId))
+            {
+                Console.WriteLine("Invalid input.");
+                return;
+            }
+
+            Book book = bookService.GetBookById(bookId);
+            if (book == null)
+            {
+                Console.WriteLine("Book not found!");
+                return;
+            }
+
+            Console.WriteLine("Current Description: " + book.Description);
+            Console.WriteLine("Enter new description:");
+            book.Description = Console.ReadLine() ?? "";
+
+            bookService.UpdateBook(book);
+            Console.WriteLine("Book description updated successfully!");
         }
     }
 }

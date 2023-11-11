@@ -4,6 +4,7 @@ namespace HomeLibrary.Models
     public class Book : LibraryItem
     {
         public string? Author { get; set; }
+        public string? Description { get; set; } // Description property to add to existing books
 
         // Implement the abstract method from LibraryItem.
         // For example, return a string describing the book.
