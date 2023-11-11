@@ -1,0 +1,40 @@
+# Default build output and intermediate directories
+bin/
+obj/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio specific files
+.vs/
+*.csproj.user
+*.opendb
+*.opensdf
+
+# NuGet Packages
+packages/
+*.nupkg
+*.snupkg
+
+# SQLite database file
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+
+# ReSharper / Rider
+.idea/
+
+# VSCode
+.vscode/
+
+# Miscellaneous files
+*.log
+*.tmp
+.DS_Store
+*~
+*.bak
