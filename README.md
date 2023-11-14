@@ -17,7 +17,7 @@ This project is a simple console-based application for managing a home library. 
 
 - .NET Core SDK (version 6.0 or later)
 - Git (for cloning the repository)
-- SQLite (for the database)
+- SQLite (for the database) https://www.sqlite.org/index.html
 
 ### Steps to Set Up
 
