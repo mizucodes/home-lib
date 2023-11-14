@@ -54,5 +54,11 @@ namespace HomeLibrary.Services
         {
             _bookRepository.DeleteBook(bookId);
         }
+
+        // Searches the DB with the provided search term
+        public List<Book> SearchBooks(string searchTerm)
+        {
+            return _bookRepository.SearchBooks(searchTerm);
+        }
     }
 }
