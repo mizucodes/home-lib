@@ -82,8 +82,8 @@ namespace HomeLibrary
             var books = bookService.GetAllBooks();
             foreach (var book in books)
             {
-                Console.WriteLine($"ID: {book.BookId}, Title: {book.Title}, Author: {book.Author}");
-                Console.WriteLine($"Description: {book.Description}");
+                Console.WriteLine($"ID: {book.BookId}, \nTitle: {book.Title} \nAuthor: {book.Author}");
+                Console.WriteLine($"\nDescription: {book.Description}");
                 Console.WriteLine(); // empty line for better readability
             }
         }
