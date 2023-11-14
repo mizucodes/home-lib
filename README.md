@@ -45,10 +45,6 @@ This project is a simple console-based application for managing a home library. 
 
 After running the application, follow the on-screen prompts to manage your home library. Select the operation you wish to perform by entering the corresponding number and following any additional instructions.
 
-## Contributing
-
-Contributions to this project are welcome. Please ensure to update tests as appropriate.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
