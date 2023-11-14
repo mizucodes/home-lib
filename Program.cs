@@ -23,7 +23,8 @@ namespace HomeLibrary
                 Console.WriteLine("3. Edit Book");
                 Console.WriteLine("4. Delete Book");
                 Console.WriteLine("5. Update Book Description");
-                Console.WriteLine("6. Exit");
+                Console.WriteLine("6. Search Books");
+                Console.WriteLine("7. Exit");
                 Console.Write("Choose an option: ");
 
                 // Parse user input and handle invalid input.
@@ -52,7 +53,10 @@ namespace HomeLibrary
                         UpdateBookDescription(bookService); // Add book description 
                         break;
                     case 6:
-                        Console.WriteLine("Exiting application.");
+                        SearchBooks(bookService);
+                        break;
+                    case 7:
+                        Console.WriteLine("Exiting the application...");
                         return;
                     default:
                         Console.WriteLine("Invalid choice, please try again."); // Handle unknown input.
@@ -157,6 +161,26 @@ namespace HomeLibrary
 
             bookService.UpdateBook(book);
             Console.WriteLine("Book description updated successfully!");
+        }
+
+        // Method to search for a book by Title
+        static void SearchBooks(BookService bookService)
+        {
+            Console.WriteLine("Enter search term:");
+            string searchTerm = Console.ReadLine() ?? "";
+
+            var books = bookService.SearchBooks(searchTerm);
+            if (books.Any())
+            {
+                foreach (var book in books)
+                {
+                    Console.WriteLine($"ID: {book.BookId}, Title: {book.Title}, Author: {book.Author}, Description: {book.Description}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No results.");
+            }
         }
     }
 }
