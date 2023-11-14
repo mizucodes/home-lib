@@ -53,5 +53,21 @@ namespace HomeLibrary.Data
         {
             return _context?.Books?.Find(bookId)!; // Finds the book by its ID.
         }
+
+        // Ability to search for a book by Title
+        public List<Book> SearchBooks(string searchTerm)
+        {
+            // Check if the context or the Books set is null before proceeding
+            if (_context == null || _context.Books == null)
+            {
+                return new List<Book>();
+            }
+
+            // Perform the search on non-null DbSet
+            return _context.Books
+                .Where(book => book.Title != null && book.Title.Contains(searchTerm) ||
+                               book.Author != null && book.Author.Contains(searchTerm))
+                .ToList();
+        }
     }
 }
